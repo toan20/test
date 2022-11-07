@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="menu-header">
+    <div class="container">
+      <div class="logo">
+        <a href="">
+          <img class="avatar" src="./img/logo.webp" alt="">
+        </a>
+      </div>
+      <div class="menu-nav">
+        <ul>
+          <li><a style="text-decoration: none;" href="">Trang Chủ</a></li>
+          <li><a style="text-decoration: none;" href="">Sản Phẩm</a></li>
+          <li><a style="text-decoration: none;" href="">Store</a></li>
+          <li><a style="text-decoration: none;" href="">Giới Thiệu</a></li>
+        </ul>
+      </div>
+      <div class="menu-search">
+        <div class="box-search ">
+          <button id="btn-search">
+            <svg class="svg search" height="30px" width="30px" viewBox="0 0 24 24">
+              <path
+                d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z">
+              </path>
+            </svg>
+          </button>
+          <input class="input-search" id="search" type="text" placeholder="Tìm kiếm sản phẩm...">
+        </div>
+        <div class="icon-close-search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg>
+        </div>
+        </div>
+      <div class="menu-box">
+        <div class="box-icon">
+          <svg class="svg-ico-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 -13 456.75885 456" width="30pt">
+            <path
+              d="m150.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
+            </path>
+            <path
+              d="m446.855469 94.035156h-353.101563l-7.199218-40.300781c-4.4375-24.808594-23.882813-44.214844-48.699219-48.601563l-26.101563-4.597656c-5.441406-.96875-10.632812 2.660156-11.601562 8.097656-.964844 5.441407 2.660156 10.632813 8.101562 11.601563l26.199219 4.597656c16.53125 2.929688 29.472656 15.871094 32.402344 32.402344l35.398437 199.699219c4.179688 23.894531 24.941406 41.324218 49.199219 41.300781h210c22.0625.066406 41.546875-14.375 47.902344-35.5l47-155.800781c.871093-3.039063.320312-6.3125-1.5-8.898438-1.902344-2.503906-4.859375-3.980468-8-4zm-56.601563 162.796875c-3.773437 12.6875-15.464844 21.367188-28.699218 21.300781h-210c-14.566407.039063-27.035157-10.441406-29.5-24.800781l-24.699219-139.398437h336.097656zm0 0">
+            </path>
+            <path
+              d="m360.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
+            </path>
+          </svg>
+        </div>
+        <span>Giỏ hàng</span>
+      </div>
+      <div class="login">
+        <p class="btn-register">Đăng ký</p>
+        <p style="letter-spacing: 2px;">/</p>
+        <p class="btn-login">Đăng nhập</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="container">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/sl1.jpg" class="d-block w-100" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/sl2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/sl3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="sale">
+    <div class="container">
+      <h2 style="font-size: 16px;margin-top: 10px;">ĐẶC QUYỀN CHO BẠN HÔM NAY!</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="cardd">
+            <Span class="sale-title">Degrey giao hoả tốc</Span>
+            <p style="margin-left: 5px;">Giờ đây bạn có thể nhận hàng nhanh trong ngày mà không cần chờ đợi tại Sài Gòn
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="cardd">
+            <Span class="sale-title">Hà Nội Freeship</Span>
+            <p style="margin-left: 5px;">Degrey dành tặng Hà Nội mã freeship 0đ (số lượng có hạn)</p>
+            <button class="sale-btn">Sao Chép Mã</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="cardd">
+            <Span class="sale-title">Tặng 125.000đ</Span>
+            <p style="margin-left: 5px;">Áp dụng đặc biệt cho đơn hàng từ 2,5 triệu đồng</p>
+            <button class="sale-btn">Sao Chép Mã</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="cardd">
+            <Span class="sale-title">Khuyến mãi đến 10%</Span>
+            <p style="margin-left: 5px;">Mã giảm 10% cho hoá đơn mua hàng trên 5 triệu đồng</p>
+            <button class="sale-btn">Sao Chép Mã</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    <div class="container">
+      <h2>BACKPACKS | BALO</h2>
+    </div>
+  </div>
+  <div class="collection">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="collectionn-item">
+            <img class="collectionn-img" src="./img/bl1.webp" alt="">
+            <div class="box">
+              <p class="title-item">Mono Degrey Backpack - MDB</p>
+              <span class="price-item">490,000₫</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="collectionn-item">
+            <img class="collectionn-img" src="./img/bl2.webp" alt="">
+            <div class="box">
+              <p class="title-item">Degrey Galaxy Backpack - DGB</p>
+              <span class="price-item">490,000₫</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="collectionn-item">
+            <img class="collectionn-img" src="./img/bl3.webp" alt="">
+            <div class="box">
+              <p class="title-item">Basic Backpack Degrey Holo - BBDH</p>
+              <span class="price-item">490,000₫</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="collectionn-item">
+            <img class="collectionn-img" src="./img/bl4.webp" alt="">
+            <div class="box">
+              <p class="title-item">Balo Quốc Dân ss2 Xám - BQD ss2 Xám</p>
+              <span class="price-item">290,000₫</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn-add">XEM THÊM SẢN PHẨM BACKPACKS | BALO</button>
+  <div class="title">
+    <div class="container">
+      <h2>ÁO KHOÁC | JACKET</h2>
+    </div>
+  </div>
+  <div class="collection">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="collectionn-item">
+            <img class="collectionn-img" src="./img/ao1.webp" alt="">
+            <div class="box">
+              <p class="title-item">Mono Degrey Backpack - MDB</p>
+              <span class="price-item">490,000₫</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="collectionn-item">
+            <img class="collectionn-img" src="./img/ao2.webp" alt="">
+            <div class="box">
+              <p class="title-item">Degrey Galaxy Backpack - DGB</p>
+              <span class="price-item">490,000₫</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="collectionn-item">
+            <img class="collectionn-img" src="./img/ao3.webp" alt="">
+            <div class="box">
+              <p class="title-item">Basic Backpack Degrey Holo - BBDH</p>
+              <span class="price-item">490,000₫</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="collectionn-item">
+            <img class="collectionn-img" src="./img/ao4.webp" alt="">
+            <div class="box">
+              <p class="title-item">Balo Quốc Dân ss2 Xám - BQD ss2 Xám</p>
+              <span class="price-item">290,000₫</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn-add">XEM THÊM SẢN PHẨM ÁO KHOÁC | JACKET</button>
+  <div class="set-item">
+    <div class="container">
+      <div class="title">
+        <h3>Set đồ gợi ý</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img style="width: 100%;" src="./img/set1.webp" alt="">
+        </div>
+        <div class="col-md-4">
+          <img style="width: 100%;" src="./img/set2.webp" alt="">
+        </div>
+        <div class="col-md-4">
+          <img style="width: 100%;" src="./img/set3.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h4>Về DEGREY</h4>
+            <p>Cái tên Degrey được tạo ra rất ngẫu hứng, xuất phát từ “Chuỗi ngày u buồn về sự nghiệp, tương lai trong
+              quá khứ của chính mình” – theo lời chia sẻ của Degrey’s founder.</p>
+          </div>
+          <div class="col-md-3">
+            <h4>Địa chỉ</h4>
+            <p><b>-Sài Gòn: </b>
+              <br>
+              43 Huỳnh Văn Bánh P.17 Q.Phú Nhuận <br>
+              905 Luỹ Bán Bích P.Tân Thành Q.Tân Phú <br>
+              26 Lý Tự Trọng Q.1 - The New Playground <br>
+              <b>-Đà Lạt: </b> <br>
+              11 Khu Hoà Bình P.1 <br>
+              <b>Điện thoại:</b> 0336311117 <br>
+              <b>Email:</b> degrey.vn@gmail.com
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul>
+              <li>Shop</li>
+              <li>Hướng dẫn đặt hàng</li>
+              <li>Chính sách và quy định</li>
+              <li>Chính sách bảo mật</li>
+              <li>Thông tin sở hữu</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Chăm sóc khách hàng</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="model-giohang">
+    <div id="detail-box">
+      <div class="header-model">
+        <p class="txt-title">Giỏ Hàng</p>
+        <div class="icon-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="mini-cart__empty">
+        <svg class="svg-ico-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 -13 456.75885 456" width="30pt">
+          <path
+            d="m150.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
+          </path>
+          <path
+            d="m446.855469 94.035156h-353.101563l-7.199218-40.300781c-4.4375-24.808594-23.882813-44.214844-48.699219-48.601563l-26.101563-4.597656c-5.441406-.96875-10.632812 2.660156-11.601562 8.097656-.964844 5.441407 2.660156 10.632813 8.101562 11.601563l26.199219 4.597656c16.53125 2.929688 29.472656 15.871094 32.402344 32.402344l35.398437 199.699219c4.179688 23.894531 24.941406 41.324218 49.199219 41.300781h210c22.0625.066406 41.546875-14.375 47.902344-35.5l47-155.800781c.871093-3.039063.320312-6.3125-1.5-8.898438-1.902344-2.503906-4.859375-3.980468-8-4zm-56.601563 162.796875c-3.773437 12.6875-15.464844 21.367188-28.699218 21.300781h-210c-14.566407.039063-27.035157-10.441406-29.5-24.800781l-24.699219-139.398437h336.097656zm0 0">
+          </path>
+          <path
+            d="m360.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
+          </path>
+        </svg>
+        <p>Hiện chưa có sản phẩm</p>
+      </div>
+      <div class="mini-card">
+        <div class="mini-cart-total">
+          <div class="txt-total">Tổng Tiền</div>
+          <div class="txt-price">0đ</div>
+        </div>
+        <div class="mini-cart-btn">
+          <button class="card-btn">Xem Giỏ Hàng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="model-register">
+    <div id="box-model-register">
+      <div class="header-model">
+        <p class="txt-title">Đăng ký tài khoản</p>
+        <div class="icon-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="body-model">
+        <i><b>
+            <p class="text-input">Tên</p>
+          </b></i>
+        <input class="input-model" type="text" placeholder="Nhập vào tên">
+        <i><b>
+            <p class="text-input">Họ Lót</p>
+          </b></i>
+
+        <input class="input-model" type="text"placeholder="Nhập vào họ lót">
+        <i><b>
+            <p class="text-input">Số điện thoại</p>
+          </b></i>
+
+        <input class="input-model" type="number" placeholder="Nhập vào số điện thoại">
+        <i><b>
+            <p class="text-input">Email</p>
+          </b></i>
+
+        <input class="input-model" type="email" placeholder="Nhập vào Email">
+        <i><b>
+            <p class="text-input">Password</p>
+          </b></i>
+
+        <input id="showpassword-register" class="input-model" type="password"placeholder="Nhập vào password">
+        <button class="icon-showpassword-register">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+            <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+            <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+            <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+          </svg>
+         </button> 
+        <i><b>
+          <p class="text-input">Nhập lại Password</p>
+        </b></i>
+
+      <input id="showpassword-ref" class="input-model" type="password"placeholder="Nhập lại password">
+      <button class="icon-showpassword-ref">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+          <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+          <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+          <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+        </svg>
+       </button> 
+        <i><b>
+            <p class="text-input">Địa chỉ</p>
+          </b></i>
+
+        <input class="input-model" type="text" placeholder="Nhập vào địa chỉ">
+      </div>
+      <div class="mini-cart-btn">
+        <button class=" card-btn">Đăng Ký</button>
+      </div>
+    </div>
+
+  </div>
+  <div id="model-login">
+    <div id="box-model-login">
+      <div class="header-model">
+        <p class="txt-title">Đăng nhập hệ thống</p>
+        <div class="icon-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="body-model">
+        <i><b>
+            <p class="text-input">Email</p>
+          </b></i>
+
+        <input class="input-model" type="email" placeholder="Nhập vào Email">
+        <i><b>
+            <p class="text-input">Password</p>
+          </b></i>
+          <div class="password-login">
+            <input id="showpassword" class="input-model" type="password" placeholder="Nhập vào Password">
+           <button class="icon-showpassword-login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+              <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+              <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+              <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+            </svg>
+           </button>         
+          </div>
+      <div class="mini-cart-btn">
+        <button class=" card-btn"><span>Đăng Nhập</span></button>
+      </div>
+      <a href="">Quên mật khẩu ?</a>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="./main.js"></script>
+</html>
